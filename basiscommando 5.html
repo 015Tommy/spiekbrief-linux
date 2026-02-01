@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informatie Bank Linux - Basiscommando's</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Informatie Bank Linux</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inleiding.html">Inleiding tot Linux</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bestanden-mappen.html">Bestanden & Mappen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="opstarten.html">Opstarten van Linux</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="basiscommando.html">Basiscommando's</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="overig.html">Overig</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container text-center">
+            <h1>Basiscommando's</h1>
+            <p class="lead">Leer essentiële Linux commando's</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Essentiële Linux commando's</h2>
+            <p>Linux gebruikt een commandoregel (terminal) voor veel taken. Hier zijn enkele basiscommando's met uitleg over hoe ze werken en wat ze doen:</p>
+
+            <h3>Bestandsbeheer</h3>
+            <ul>
+                <li><strong>ls:</strong> Toont bestanden in de huidige map. Opties: <code>-l</code> (gedetailleerd), <code>-a</code> (alle bestanden inclusief verborgen).</li>
+                <li><strong>cd:</strong> Verandert naar een andere map. Bijv. <code>cd /home</code> gaat naar home, <code>cd ..</code> gaat omhoog.</li>
+                <li><strong>pwd:</strong> Toont de huidige werkmap (print working directory).</li>
+                <li><strong>cp:</strong> Kopieert bestanden/mappen. Gebruik <code>-r</code> voor recursief kopiëren van mappen.</li>
+                <li><strong>mv:</strong> Verplaatst of hernoemt bestanden/mappen.</li>
+                <li><strong>mkdir:</strong> Creëert nieuwe mappen. <code>-p</code> voor geneste mappen.</li>
+                <li><strong>rm:</strong> Verwijdert bestanden/mappen. <code>-r</code> voor mappen, <code>-f</code> voor force.</li>
+            </ul>
+
+            <h3>Systeem informatie</h3>
+            <ul>
+                <li><strong>uname:</strong> Toont systeem informatie. <code>uname -a</code> voor alle details.</li>
+                <li><strong>whoami:</strong> Toont huidige gebruikersnaam.</li>
+                <li><strong>date:</strong> Toont huidige datum en tijd.</li>
+                <li><strong>df:</strong> Toont schijfruimte gebruik. <code>df -h</code> voor human-readable format.</li>
+                <li><strong>free:</strong> Toont geheugen gebruik.</li>
+            </ul>
+
+            <h3>Proces beheer</h3>
+            <ul>
+                <li><strong>ps:</strong> Toont lopende processen. <code>ps aux</code> voor alle processen.</li>
+                <li><strong>top:</strong> Interactieve proces viewer.</li>
+                <li><strong>kill:</strong> Stopt een proces. Gebruik PID nummer.</li>
+            </ul>
+
+            <h3>Tekstverwerking</h3>
+            <ul>
+                <li><strong>grep:</strong> Zoekt naar patronen in tekst. Bijv. <code>grep "zoekterm" bestand.txt</code> zoekt naar "zoekterm" in bestand.txt. Opties: <code>-i</code> (case-insensitive), <code>-r</code> (recursief in mappen).</li>
+                <li><strong>cat:</strong> Toont inhoud van bestanden. <code>cat bestand.txt</code> print de inhoud naar terminal.</li>
+                <li><strong>head:</strong> Toont eerste regels van bestand. <code>head -n 10 bestand.txt</code> toont eerste 10 regels.</li>
+                <li><strong>tail:</strong> Toont laatste regels van bestand. <code>tail -n 10 bestand.txt</code> toont laatste 10 regels.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2023 Informatie Bank Linux. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
