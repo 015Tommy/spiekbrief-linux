@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informatie Bank Linux - Zoeken naar Commando's</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -97,147 +98,147 @@
                     <div id="commandList">
                         <!-- Commands will be listed here -->
                         <div class="command-item" data-command="ls">
-                            <div class="command-name" onclick="toggleExample('ls')">ls</div>
+                            <div class="command-name" onclick="toggleExample('ls')">ls <i class="bi bi-chevron-right"></i></div>
                             <p>Toont bestanden in de huidige map. Opties: -l (gedetailleerd), -a (alle bestanden inclusief verborgen).</p>
                             <div id="example-ls" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>ls -la</code> - Toont alle bestanden inclusief verborgen in gedetailleerde lijst.
                             </div>
                         </div>
                         <div class="command-item" data-command="cd">
-                            <div class="command-name" onclick="toggleExample('cd')">cd</div>
+                            <div class="command-name" onclick="toggleExample('cd')">cd <i class="bi bi-chevron-right"></i></div>
                             <p>Verandert naar een andere map. Bijv. cd /home gaat naar home, cd .. gaat omhoog.</p>
                             <div id="example-cd" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>cd /home/user</code> - Ga naar de home map van gebruiker.
                             </div>
                         </div>
                         <div class="command-item" data-command="pwd">
-                            <div class="command-name" onclick="toggleExample('pwd')">pwd</div>
+                            <div class="command-name" onclick="toggleExample('pwd')">pwd <i class="bi bi-chevron-right"></i></div>
                             <p>Toont de huidige werkmap (print working directory).</p>
                             <div id="example-pwd" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>pwd</code> - Toont de volledige pad naar de huidige directory.
                             </div>
                         </div>
                         <div class="command-item" data-command="cp">
-                            <div class="command-name" onclick="toggleExample('cp')">cp</div>
+                            <div class="command-name" onclick="toggleExample('cp')">cp <i class="bi bi-chevron-right"></i></div>
                             <p>Kopieert bestanden/mappen. Gebruik -r voor recursief kopiëren van mappen.</p>
                             <div id="example-cp" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>cp bestand.txt backup.txt</code> - Kopieer bestand.txt naar backup.txt.
                             </div>
                         </div>
                         <div class="command-item" data-command="mv">
-                            <div class="command-name" onclick="toggleExample('mv')">mv</div>
+                            <div class="command-name" onclick="toggleExample('mv')">mv <i class="bi bi-chevron-right"></i></div>
                             <p>Verplaatst of hernoemt bestanden/mappen.</p>
                             <div id="example-mv" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>mv oud.txt nieuw.txt</code> - Hernoem oud.txt naar nieuw.txt.
                             </div>
                         </div>
                         <div class="command-item" data-command="mkdir">
-                            <div class="command-name" onclick="toggleExample('mkdir')">mkdir</div>
+                            <div class="command-name" onclick="toggleExample('mkdir')">mkdir <i class="bi bi-chevron-right"></i></div>
                             <p>Creëert nieuwe mappen. -p voor geneste mappen.</p>
                             <div id="example-mkdir" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>mkdir -p pad/naar/map</code> - Creëer geneste mappen.
                             </div>
                         </div>
                         <div class="command-item" data-command="rm">
-                            <div class="command-name" onclick="toggleExample('rm')">rm</div>
+                            <div class="command-name" onclick="toggleExample('rm')">rm <i class="bi bi-chevron-right"></i></div>
                             <p>Verwijdert bestanden/mappen. -r voor mappen, -f voor force.</p>
                             <div id="example-rm" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>rm -rf map/</code> - Verwijder map recursief zonder bevestiging.
                             </div>
                         </div>
                         <div class="command-item" data-command="uname">
-                            <div class="command-name" onclick="toggleExample('uname')">uname</div>
+                            <div class="command-name" onclick="toggleExample('uname')">uname <i class="bi bi-chevron-right"></i></div>
                             <p>Toont systeem informatie. uname -a voor alle details.</p>
                             <div id="example-uname" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>uname -a</code> - Toont alle systeem informatie.
                             </div>
                         </div>
                         <div class="command-item" data-command="whoami">
-                            <div class="command-name" onclick="toggleExample('whoami')">whoami</div>
+                            <div class="command-name" onclick="toggleExample('whoami')">whoami <i class="bi bi-chevron-right"></i></div>
                             <p>Toont huidige gebruikersnaam.</p>
                             <div id="example-whoami" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>whoami</code> - Toont huidige gebruiker.
                             </div>
                         </div>
                         <div class="command-item" data-command="date">
-                            <div class="command-name" onclick="toggleExample('date')">date</div>
+                            <div class="command-name" onclick="toggleExample('date')">date <i class="bi bi-chevron-right"></i></div>
                             <p>Toont huidige datum en tijd.</p>
                             <div id="example-date" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>date</code> - Toont huidige datum en tijd.
                             </div>
                         </div>
                         <div class="command-item" data-command="df">
-                            <div class="command-name" onclick="toggleExample('df')">df</div>
+                            <div class="command-name" onclick="toggleExample('df')">df <i class="bi bi-chevron-right"></i></div>
                             <p>Toont schijfruimte gebruik. df -h voor human-readable format.</p>
                             <div id="example-df" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>df -h</code> - Toont schijfruimte in human-readable format.
                             </div>
                         </div>
                         <div class="command-item" data-command="free">
-                            <div class="command-name" onclick="toggleExample('free')">free</div>
+                            <div class="command-name" onclick="toggleExample('free')">free <i class="bi bi-chevron-right"></i></div>
                             <p>Toont geheugen gebruik.</p>
                             <div id="example-free" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>free -h</code> - Toont geheugen gebruik in human-readable format.
                             </div>
                         </div>
                         <div class="command-item" data-command="ps">
-                            <div class="command-name" onclick="toggleExample('ps')">ps</div>
+                            <div class="command-name" onclick="toggleExample('ps')">ps <i class="bi bi-chevron-right"></i></div>
                             <p>Toont lopende processen. ps aux voor alle processen.</p>
                             <div id="example-ps" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>ps aux</code> - Toont alle lopende processen met details.
                             </div>
                         </div>
                         <div class="command-item" data-command="top">
-                            <div class="command-name" onclick="toggleExample('top')">top</div>
+                            <div class="command-name" onclick="toggleExample('top')">top <i class="bi bi-chevron-right"></i></div>
                             <p>Interactieve proces viewer.</p>
                             <div id="example-top" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>top</code> - Start interactieve proces viewer.
                             </div>
                         </div>
                         <div class="command-item" data-command="kill">
-                            <div class="command-name" onclick="toggleExample('kill')">kill</div>
+                            <div class="command-name" onclick="toggleExample('kill')">kill <i class="bi bi-chevron-right"></i></div>
                             <p>Stopt een proces. Gebruik PID nummer.</p>
                             <div id="example-kill" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>kill 1234</code> - Stopt proces met PID 1234.
                             </div>
                         </div>
                         <div class="command-item" data-command="grep">
-                            <div class="command-name" onclick="toggleExample('grep')">grep</div>
+                            <div class="command-name" onclick="toggleExample('grep')">grep <i class="bi bi-chevron-right"></i></div>
                             <p>Zoekt naar patronen in tekst. Bijv. grep "zoekterm" bestand.txt zoekt naar "zoekterm" in bestand.txt. Opties: -i (case-insensitive), -r (recursief in mappen).</p>
                             <div id="example-grep" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>grep "error" log.txt</code> - Zoek naar "error" in log.txt.
                             </div>
                         </div>
                         <div class="command-item" data-command="cat">
-                            <div class="command-name" onclick="toggleExample('cat')">cat</div>
+                            <div class="command-name" onclick="toggleExample('cat')">cat <i class="bi bi-chevron-right"></i></div>
                             <p>Toont inhoud van bestanden. cat bestand.txt print de inhoud naar terminal.</p>
                             <div id="example-cat" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>cat bestand.txt</code> - Toont inhoud van bestand.txt.
                             </div>
                         </div>
                         <div class="command-item" data-command="head">
-                            <div class="command-name" onclick="toggleExample('head')">head</div>
+                            <div class="command-name" onclick="toggleExample('head')">head <i class="bi bi-chevron-right"></i></div>
                             <p>Toont eerste regels van bestand. head -n 10 bestand.txt toont eerste 10 regels.</p>
                             <div id="example-head" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>head -n 5 bestand.txt</code> - Toont eerste 5 regels van bestand.txt.
                             </div>
                         </div>
                         <div class="command-item" data-command="tail">
-                            <div class="command-name" onclick="toggleExample('tail')">tail</div>
+                            <div class="command-name" onclick="toggleExample('tail')">tail <i class="bi bi-chevron-right"></i></div>
                             <p>Toont laatste regels van bestand. tail -n 10 bestand.txt toont laatste 10 regels.</p>
                             <div id="example-tail" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>tail -n 5 bestand.txt</code> - Toont laatste 5 regels van bestand.txt.
                             </div>
                         </div>
                         <div class="command-item" data-command="rmdir">
-                            <div class="command-name" onclick="toggleExample('rmdir')">rmdir</div>
+                            <div class="command-name" onclick="toggleExample('rmdir')">rmdir <i class="bi bi-chevron-right"></i></div>
                             <p>Verwijdert een lege map. Voor niet-lege mappen gebruik rm -r map_naam.</p>
                             <div id="example-rmdir" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>rmdir lege_map</code> - Verwijder lege map.
                             </div>
                         </div>
                         <div class="command-item" data-command="touch">
-                            <div class="command-name" onclick="toggleExample('touch')">touch</div>
+                            <div class="command-name" onclick="toggleExample('touch')">touch <i class="bi bi-chevron-right"></i></div>
                             <p>Creëert een leeg bestand of update de modificatietijd van een bestaand bestand.</p>
                             <div id="example-touch" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>touch nieuw_bestand.txt</code> - Creëer een leeg bestand.
@@ -260,42 +261,42 @@
                             <p>Verandert wachtwoord van gebruiker.</p>
                         </div>
                         <div class="command-item" data-command="apt update">
-                            <div class="command-name" onclick="toggleExample('apt-update')">apt update</div>
+                            <div class="command-name" onclick="toggleExample('apt-update')">apt update <i class="bi bi-chevron-right"></i></div>
                             <p>Update pakketlijsten.</p>
                             <div id="example-apt-update" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>apt update</code> - Update pakketlijsten.
                             </div>
                         </div>
                         <div class="command-item" data-command="apt install">
-                            <div class="command-name" onclick="toggleExample('apt-install')">apt install</div>
+                            <div class="command-name" onclick="toggleExample('apt-install')">apt install <i class="bi bi-chevron-right"></i></div>
                             <p>Installeer pakket. Bijv. apt install firefox.</p>
                             <div id="example-apt-install" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>apt install firefox</code> - Installeer Firefox.
                             </div>
                         </div>
                         <div class="command-item" data-command="apt remove">
-                            <div class="command-name" onclick="toggleExample('apt-remove')">apt remove</div>
+                            <div class="command-name" onclick="toggleExample('apt-remove')">apt remove <i class="bi bi-chevron-right"></i></div>
                             <p>Verwijder pakket.</p>
                             <div id="example-apt-remove" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>apt remove firefox</code> - Verwijder Firefox.
                             </div>
                         </div>
                         <div class="command-item" data-command="yum install">
-                            <div class="command-name" onclick="toggleExample('yum-install')">yum install</div>
+                            <div class="command-name" onclick="toggleExample('yum-install')">yum install <i class="bi bi-chevron-right"></i></div>
                             <p>Installeer pakket op RPM-gebaseerde systemen.</p>
                             <div id="example-yum-install" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>yum install firefox</code> - Installeer Firefox op RPM systeem.
                             </div>
                         </div>
                         <div class="command-item" data-command="bg">
-                            <div class="command-name" onclick="toggleExample('bg')">bg</div>
+                            <div class="command-name" onclick="toggleExample('bg')">bg <i class="bi bi-chevron-right"></i></div>
                             <p>Zet proces op achtergrond.</p>
                             <div id="example-bg" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>bg</code> - Zet gestopt proces op achtergrond.
                             </div>
                         </div>
                         <div class="command-item" data-command="fg">
-                            <div class="command-name" onclick="toggleExample('fg')">fg</div>
+                            <div class="command-name" onclick="toggleExample('fg')">fg <i class="bi bi-chevron-right"></i></div>
                             <p>Breng proces naar voorgrond.</p>
                             <div id="example-fg" class="example" style="display: none;">
                                 <strong>Voorbeeld:</strong> <code>fg</code> - Breng achtergrond proces naar voorgrond.
@@ -353,10 +354,13 @@
     <script>
         function toggleExample(command) {
             const example = document.getElementById('example-' + command);
+            const icon = document.querySelector(`[onclick="toggleExample('${command}')"] i`);
             if (example.style.display === 'none' || example.style.display === '') {
                 example.style.display = 'block';
+                icon.className = 'bi bi-chevron-down';
             } else {
                 example.style.display = 'none';
+                icon.className = 'bi bi-chevron-right';
             }
         }
 
