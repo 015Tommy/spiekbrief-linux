@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informatie Bank Linux - Zoeken naar Commando's</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+        .command-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .command-name {
+            font-weight: bold;
+            color: #007bff;
+            cursor: pointer;
+        }
+        .command-name:hover {
+            text-decoration: underline;
+        }
+        .example {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index 5.html">Informatie Bank Linux</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index 5.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inleiding 5.html">Inleiding tot Linux</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bestanden-mappen 5.html">Bestanden & Mappen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="opstarten 5.html">Opstarten van Linux</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="basiscommando 5.html">Basiscommando's</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="zoeken 5.html">Zoeken naar Commando's</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="overig 5.html">Overig</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container text-center">
+            <h1>Zoeken naar Commando's</h1>
+            <p class="lead">Zoek naar Linux commando's en hun beschrijvingen</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <input type="text" id="searchInput" class="form-control mb-4" placeholder="Zoek naar een commando...">
+                    <div id="commandList">
+                        <!-- Commands will be listed here -->
+                        <div class="command-item" data-command="ls">
+                            <div class="command-name" onclick="toggleExample('ls')">ls</div>
+                            <p>Toont bestanden in de huidige map. Opties: -l (gedetailleerd), -a (alle bestanden inclusief verborgen).</p>
+                            <div id="example-ls" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>ls -la</code> - Toont alle bestanden inclusief verborgen in gedetailleerde lijst.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="cd">
+                            <div class="command-name" onclick="toggleExample('cd')">cd</div>
+                            <p>Verandert naar een andere map. Bijv. cd /home gaat naar home, cd .. gaat omhoog.</p>
+                            <div id="example-cd" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>cd /home/user</code> - Ga naar de home map van gebruiker.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="pwd">
+                            <div class="command-name" onclick="toggleExample('pwd')">pwd</div>
+                            <p>Toont de huidige werkmap (print working directory).</p>
+                            <div id="example-pwd" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>pwd</code> - Toont de volledige pad naar de huidige directory.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="cp">
+                            <div class="command-name" onclick="toggleExample('cp')">cp</div>
+                            <p>Kopieert bestanden/mappen. Gebruik -r voor recursief kopiëren van mappen.</p>
+                            <div id="example-cp" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>cp bestand.txt backup.txt</code> - Kopieer bestand.txt naar backup.txt.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="mv">
+                            <div class="command-name" onclick="toggleExample('mv')">mv</div>
+                            <p>Verplaatst of hernoemt bestanden/mappen.</p>
+                            <div id="example-mv" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>mv oud.txt nieuw.txt</code> - Hernoem oud.txt naar nieuw.txt.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="mkdir">
+                            <div class="command-name" onclick="toggleExample('mkdir')">mkdir</div>
+                            <p>Creëert nieuwe mappen. -p voor geneste mappen.</p>
+                            <div id="example-mkdir" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>mkdir -p pad/naar/map</code> - Creëer geneste mappen.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="rm">
+                            <div class="command-name" onclick="toggleExample('rm')">rm</div>
+                            <p>Verwijdert bestanden/mappen. -r voor mappen, -f voor force.</p>
+                            <div id="example-rm" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>rm -rf map/</code> - Verwijder map recursief zonder bevestiging.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="uname">
+                            <div class="command-name" onclick="toggleExample('uname')">uname</div>
+                            <p>Toont systeem informatie. uname -a voor alle details.</p>
+                            <div id="example-uname" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>uname -a</code> - Toont alle systeem informatie.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="whoami">
+                            <div class="command-name" onclick="toggleExample('whoami')">whoami</div>
+                            <p>Toont huidige gebruikersnaam.</p>
+                            <div id="example-whoami" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>whoami</code> - Toont huidige gebruiker.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="date">
+                            <div class="command-name" onclick="toggleExample('date')">date</div>
+                            <p>Toont huidige datum en tijd.</p>
+                            <div id="example-date" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>date</code> - Toont huidige datum en tijd.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="df">
+                            <div class="command-name" onclick="toggleExample('df')">df</div>
+                            <p>Toont schijfruimte gebruik. df -h voor human-readable format.</p>
+                            <div id="example-df" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>df -h</code> - Toont schijfruimte in human-readable format.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="free">
+                            <div class="command-name" onclick="toggleExample('free')">free</div>
+                            <p>Toont geheugen gebruik.</p>
+                            <div id="example-free" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>free -h</code> - Toont geheugen gebruik in human-readable format.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="ps">
+                            <div class="command-name" onclick="toggleExample('ps')">ps</div>
+                            <p>Toont lopende processen. ps aux voor alle processen.</p>
+                            <div id="example-ps" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>ps aux</code> - Toont alle lopende processen met details.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="top">
+                            <div class="command-name" onclick="toggleExample('top')">top</div>
+                            <p>Interactieve proces viewer.</p>
+                            <div id="example-top" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>top</code> - Start interactieve proces viewer.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="kill">
+                            <div class="command-name" onclick="toggleExample('kill')">kill</div>
+                            <p>Stopt een proces. Gebruik PID nummer.</p>
+                            <div id="example-kill" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>kill 1234</code> - Stopt proces met PID 1234.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="grep">
+                            <div class="command-name" onclick="toggleExample('grep')">grep</div>
+                            <p>Zoekt naar patronen in tekst. Bijv. grep "zoekterm" bestand.txt zoekt naar "zoekterm" in bestand.txt. Opties: -i (case-insensitive), -r (recursief in mappen).</p>
+                            <div id="example-grep" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>grep "error" log.txt</code> - Zoek naar "error" in log.txt.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="cat">
+                            <div class="command-name" onclick="toggleExample('cat')">cat</div>
+                            <p>Toont inhoud van bestanden. cat bestand.txt print de inhoud naar terminal.</p>
+                            <div id="example-cat" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>cat bestand.txt</code> - Toont inhoud van bestand.txt.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="head">
+                            <div class="command-name" onclick="toggleExample('head')">head</div>
+                            <p>Toont eerste regels van bestand. head -n 10 bestand.txt toont eerste 10 regels.</p>
+                            <div id="example-head" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>head -n 5 bestand.txt</code> - Toont eerste 5 regels van bestand.txt.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="tail">
+                            <div class="command-name" onclick="toggleExample('tail')">tail</div>
+                            <p>Toont laatste regels van bestand. tail -n 10 bestand.txt toont laatste 10 regels.</p>
+                            <div id="example-tail" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>tail -n 5 bestand.txt</code> - Toont laatste 5 regels van bestand.txt.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="rmdir">
+                            <div class="command-name" onclick="toggleExample('rmdir')">rmdir</div>
+                            <p>Verwijdert een lege map. Voor niet-lege mappen gebruik rm -r map_naam.</p>
+                            <div id="example-rmdir" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>rmdir lege_map</code> - Verwijder lege map.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="touch">
+                            <div class="command-name" onclick="toggleExample('touch')">touch</div>
+                            <p>Creëert een leeg bestand of update de modificatietijd van een bestaand bestand.</p>
+                            <div id="example-touch" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>touch nieuw_bestand.txt</code> - Creëer een leeg bestand.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="chmod">
+                            <div class="command-name">chmod</div>
+                            <p>Verandert permissies van bestanden/mappen. Bijv. chmod 755 bestand geeft eigenaar read/write/execute, groep en anderen read/execute.</p>
+                        </div>
+                        <div class="command-item" data-command="chown">
+                            <div class="command-name">chown</div>
+                            <p>Verandert eigenaar van bestanden. chown gebruiker bestand.</p>
+                        </div>
+                        <div class="command-item" data-command="useradd">
+                            <div class="command-name">useradd</div>
+                            <p>Creëert een nieuwe gebruiker. useradd nieuwe_gebruiker.</p>
+                        </div>
+                        <div class="command-item" data-command="passwd">
+                            <div class="command-name">passwd</div>
+                            <p>Verandert wachtwoord van gebruiker.</p>
+                        </div>
+                        <div class="command-item" data-command="apt update">
+                            <div class="command-name" onclick="toggleExample('apt-update')">apt update</div>
+                            <p>Update pakketlijsten.</p>
+                            <div id="example-apt-update" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>apt update</code> - Update pakketlijsten.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="apt install">
+                            <div class="command-name" onclick="toggleExample('apt-install')">apt install</div>
+                            <p>Installeer pakket. Bijv. apt install firefox.</p>
+                            <div id="example-apt-install" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>apt install firefox</code> - Installeer Firefox.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="apt remove">
+                            <div class="command-name" onclick="toggleExample('apt-remove')">apt remove</div>
+                            <p>Verwijder pakket.</p>
+                            <div id="example-apt-remove" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>apt remove firefox</code> - Verwijder Firefox.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="yum install">
+                            <div class="command-name" onclick="toggleExample('yum-install')">yum install</div>
+                            <p>Installeer pakket op RPM-gebaseerde systemen.</p>
+                            <div id="example-yum-install" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>yum install firefox</code> - Installeer Firefox op RPM systeem.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="bg">
+                            <div class="command-name" onclick="toggleExample('bg')">bg</div>
+                            <p>Zet proces op achtergrond.</p>
+                            <div id="example-bg" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>bg</code> - Zet gestopt proces op achtergrond.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="fg">
+                            <div class="command-name" onclick="toggleExample('fg')">fg</div>
+                            <p>Breng proces naar voorgrond.</p>
+                            <div id="example-fg" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>fg</code> - Breng achtergrond proces naar voorgrond.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="ifconfig">
+                            <div class="command-name" onclick="toggleExample('ifconfig')">ifconfig</div>
+                            <p>Toont netwerk interfaces (ouder commando).</p>
+                            <div id="example-ifconfig" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>ifconfig</code> - Toont netwerk interfaces.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="ip">
+                            <div class="command-name" onclick="toggleExample('ip')">ip</div>
+                            <p>Modern commando voor netwerkconfiguratie. ip addr show toont IP adressen.</p>
+                            <div id="example-ip" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>ip addr show</code> - Toont IP adressen.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="ping">
+                            <div class="command-name" onclick="toggleExample('ping')">ping</div>
+                            <p>Test connectiviteit naar host. ping google.com.</p>
+                            <div id="example-ping" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>ping google.com</code> - Test connectiviteit naar google.com.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="ssh">
+                            <div class="command-name" onclick="toggleExample('ssh')">ssh</div>
+                            <p>Verbind veilig naar remote server. ssh user@host.</p>
+                            <div id="example-ssh" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>ssh user@host</code> - Verbind naar remote server.
+                            </div>
+                        </div>
+                        <div class="command-item" data-command="wget">
+                            <div class="command-name" onclick="toggleExample('wget')">wget</div>
+                            <p>Download bestanden van internet. wget url.</p>
+                            <div id="example-wget" class="example" style="display: none;">
+                                <strong>Voorbeeld:</strong> <code>wget https://example.com/file.zip</code> - Download bestand.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2023 Informatie Bank Linux. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleExample(command) {
+            const example = document.getElementById('example-' + command);
+            if (example.style.display === 'none' || example.style.display === '') {
+                example.style.display = 'block';
+            } else {
+                example.style.display = 'none';
+            }
+        }
+
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const commands = document.querySelectorAll('.command-item');
+            commands.forEach(command => {
+                const commandName = command.getAttribute('data-command').toLowerCase();
+                const commandText = command.textContent.toLowerCase();
+                if (commandName.includes(query) || commandText.includes(query)) {
+                    command.style.display = 'block';
+                } else {
+                    command.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
